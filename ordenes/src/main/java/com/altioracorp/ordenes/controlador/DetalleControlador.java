@@ -43,5 +43,10 @@ public class DetalleControlador {
 	}
 	
 	
+	@GetMapping(path = { "/stock/{codigo}" })
+	public Detalleorden mostrarCant(@PathVariable("codigo") int codigo) {
+		return detservice.mostrarCantidad(codigo);
+
+	}
 
 }
